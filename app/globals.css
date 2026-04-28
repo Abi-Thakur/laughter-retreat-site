@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root{
+  --primary-color: #8FA88A;
+  --secondary-color: #4A6145;
+  --text-color: #2C2C2A;
+  --accent-color: #C9A96E;
+  --background-color: #FDFCFA;
+  --secondary-background: #F2EDE4;
+  --alternate-background: #E0D6C8;
+  --card-color : #C8D9C4;
+  --secondary-text: #7A7972;
+  --font-sans: 'Jost', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --border-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Typography */
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2C2C2A;
+  background-color: var(--background-color);
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+em{
+  color: var(--secondary-color);
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+
+ /* layout */
+
