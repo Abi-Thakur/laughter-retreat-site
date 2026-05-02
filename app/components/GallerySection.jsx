@@ -42,8 +42,8 @@ export default function GallerySlider({ images }) {
       </div>
 
       {/* EDGE FADE (premium look) */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[var(--primary-color)] to-transparent z-10" />
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[var(--primary-color)] to-transparent z-10" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-20 bg-linear-to-r from-[var(--primary-color)] to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-linear-to-l from-[var(--primary-color)] to-transparent z-10" />
 
       {/* SLIDER */}
       <div className="overflow-hidden -mt-6 md:-mt-10">

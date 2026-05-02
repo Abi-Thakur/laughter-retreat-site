@@ -53,9 +53,9 @@ export default function Footer() {
           </h4>
 
           <ul className="mt-4 space-y-3 text-sm text-white/80">
-            <li>Email: hello@laughterlovelive.com</li>
-            <li>Phone: +91 98765 43210</li>
-            <li>Location: Himachal, India</li>
+            <li>Email: alwayslaughterlovelive@gmail.com</li>
+            <li>Phone: +91 62308 79866</li>
+            <li>Location: Himachal Pradesh, Kullu,  India</li>
           </ul>
         </div>
 

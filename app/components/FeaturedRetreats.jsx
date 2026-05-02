@@ -8,48 +8,43 @@ import Eyebrow from "./ui/Eyebrow";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function FeaturedRetreats({ data }) {
+export default function FeaturedRetreats({ data = [] }) {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    if (!containerRef.current) return;
+
     const cards = containerRef.current.querySelectorAll(".retreat-card");
 
-    gsap.fromTo(
-      cards,
-      {
-        opacity: 0,
-        y: 60,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.out",
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-        },
-      }
-    );
-  }, []);
+    if (!cards.length) return;
 
-  // 🔥 SORT FIX
-  const today = new Date();
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        cards,
+        { opacity: 0, y: 60 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }, containerRef);
 
-  const upcoming = data
-    .filter((r) => r.startDate && new Date(r.startDate) >= today)
-    .sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
+    return () => ctx.revert();
+  }, [data]);
 
-  const past = data
-    .filter((r) => r.startDate && new Date(r.startDate) < today)
-    .sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
-
-  const sortedRetreats = [...upcoming, ...past];
+  // ✅ No sorting, just render everything
+  const retreats = data || [];
 
   return (
     <section className="py-10 md:py-24 px-6 md:px-16 bg-(--secondary-background)">
-
+      
       {/* HEADER */}
       <div className="max-w-2xl mb-16 space-y-4">
         <Eyebrow variant="dark">Featured Retreats</Eyebrow>
@@ -63,28 +58,34 @@ export default function FeaturedRetreats({ data }) {
         </p>
       </div>
 
-      {/* GRID */}
-      <div
-        ref={containerRef}
-        className="grid gap-8 sm:grid-cols-2 md:grid-cols-3"
-      >
-        {sortedRetreats.map((item) => (
-          <div key={item.slug} className="retreat-card">
-            <RetreatCard
-              title={item.title}
-              slug={item.slug}
-              description={item.excerpt}
-              startDate={item.startDate}
-              endDate={item.endDate}
-              price={item.price}
-              currency={item.currency}
-              image={item.image}
-              tag={item.tag}
-              location={item.location}
-            />
-          </div>
-        ))}
-      </div>
+      {/* EMPTY STATE */}
+      {retreats.length === 0 ? (
+        <p className="text-center text-(--secondary-text)">
+          No retreats available right now.
+        </p>
+      ) : (
+        <div
+          ref={containerRef}
+          className="grid gap-8 sm:grid-cols-2 md:grid-cols-3"
+        >
+          {retreats.map((item, index) => (
+            <div key={item.slug || index} className="retreat-card">
+              <RetreatCard
+                title={item.title}
+                slug={item.slug}
+                description={item.excerpt}
+                startDate={item.startDate}
+                endDate={item.endDate}
+                price={item.price}
+                currency={item.currency}
+                image={item.image}
+                tag={item.tag}
+                location={item.location}
+              />
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* BUTTON */}
       <div className="mt-16 flex justify-center">

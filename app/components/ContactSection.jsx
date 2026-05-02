@@ -30,17 +30,17 @@ export default  function ContactSection() {
 
             <div className="flex items-center gap-3 text-(--text-color)">
               <Mail size={18} className="text-(--accent-color)" />
-              <span>hello@yourretreat.com</span>
+              <span>alwayslaughterlovelive@gmail.com</span>
             </div>
 
             <div className="flex items-center gap-3 text-(--text-color)">
               <Phone size={18} className="text-(--accent-color)" />
-              <span>+91 98765 43210</span>
+              <span>+91 62308 79866</span>
             </div>
 
             <div className="flex items-center gap-3 text-(--text-color)">
               <MapPin size={18} className="text-(--accent-color)" />
-              <span>Rishikesh, India</span>
+              <span>Kullu, Himachal Pradesh, India</span>
             </div>
 
           </div>

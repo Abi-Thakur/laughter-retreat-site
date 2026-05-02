@@ -69,21 +69,23 @@ export default function RetreatCard({
           )}
 
           {/* DATE */}
-          {(startDate || endDate) && (
-            <p className="text-xs text-(--secondary-text)">
-              {startDate &&
-                new Date(startDate).toLocaleDateString("en-IN", {
-                  day: "numeric",
-                  month: "short",
-                })}{" "}
-              →{" "}
-              {endDate &&
-                new Date(endDate).toLocaleDateString("en-IN", {
-                  day: "numeric",
-                  month: "short",
-                })}
-            </p>
-          )}
+          {startDate && endDate ? (
+  <p className="text-xs text-(--secondary-text)">
+    {new Date(startDate).toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+    })}{" "}
+    →{" "}
+    {new Date(endDate).toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+    })}
+  </p>
+) : (
+  <p className="text-xs text-(--secondary-text)">
+    Dates coming soon
+  </p>
+)}
 
           {/* FOOTER */}
           <div className="flex items-center justify-between pt-4 border-t border-black/5">

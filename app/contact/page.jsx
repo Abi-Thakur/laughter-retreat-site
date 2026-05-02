@@ -37,7 +37,7 @@ export default function ContactPage() {
                 <Mail size={18} />
               </div>
               <p className="text-(--text-color)">
-                hello@yourretreat.com
+                alwayslaughterlovelive@gmail.com
               </p>
             </div>
 
@@ -46,7 +46,7 @@ export default function ContactPage() {
                 <Phone size={18} />
               </div>
               <p className="text-(--text-color)">
-                +91 98765 43210
+                +91 62308 79866
               </p>
             </div>
 
@@ -55,7 +55,7 @@ export default function ContactPage() {
                 <MapPin size={18} />
               </div>
               <p className="text-(--text-color)">
-                Rishikesh, India
+                Kullu, Himachal Pradesh, India
               </p>
             </div>
           </div>

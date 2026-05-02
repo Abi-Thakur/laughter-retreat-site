@@ -1,4 +1,5 @@
 import Accordion from "./ui/Accordion";
+import Eyebrow from "./ui/Eyebrow";
 
 export default function FaqSection() {
   const faqs = [
@@ -22,18 +23,28 @@ export default function FaqSection() {
       content:
         "Yes, many participants come alone and find deep connection during the retreat.",
     },
+     {
+      title: "What is the daily schedule like?",
+      content:
+        "Each day includes meditation sessions, relaxation time, workshops, and mindful activities designed for inner growth.",
+    },
+    {
+      title: "How do I book and what is the cancellation policy?",
+      content:
+        "You can book through our website or contact us directly. Cancellation and refund policies will be clearly mentioned during booking.",
+    },
   ];
 
   return (
-    <section className="py-24 px-6 md:px-16 bg-[var(--secondary-background)]">
+    <section className="py-24 px-6 md:px-16 bg-(--secondary-background)">
 
       {/* HEADER */}
       <div className="max-w-2xl mb-12">
-        <p className="text-sm uppercase tracking-widest text-[var(--secondary-text)] mb-4">
-          FAQ
-        </p>
+        <div>
+          <Eyebrow variant="dark">FAQ</Eyebrow>
+        </div>
 
-        <h2 className="text-3xl md:text-5xl font-serif text-[var(--text-color)]">
+        <h2 className="text-3xl md:text-5xl font-serif text-(--text-color)">
           Common Questions
         </h2>
       </div>
