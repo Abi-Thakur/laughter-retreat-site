@@ -21,7 +21,7 @@ export default function Navbar() {
     { name: "About", href: "/about" },
     { name: "Retreats", href: "/retreats" },
     { name: "Facilitators", href: "/facilitators" },
-    { name: "Blog", href: "/blog" },
+    { name: "Blog", href: "/blogs" },
     { name: "Contact", href: "/contact" },
   ];
 

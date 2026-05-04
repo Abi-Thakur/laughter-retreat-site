@@ -51,3 +51,18 @@ export const allRetreatsQuery = `
     "image": featuredImage.asset->url
   }
 `;
+
+
+
+export const allBlogsQuery = `
+  *[_type == "blog"] | order(publishedAt desc) {
+    title,
+    "slug": slug.current,
+    excerpt,
+    "image": mainImage.asset->url,
+    publishedAt,
+    author,
+    category,
+    content
+  }
+`;
