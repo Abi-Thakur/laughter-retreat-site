@@ -39,7 +39,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
-            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/retreats">Services</Link></li>
             <li><Link href="/facilitators">Facilitators</Link></li>
             <li><Link href="/blog">Blog</Link></li>
             <li><Link href="/contact">Contact</Link></li>
