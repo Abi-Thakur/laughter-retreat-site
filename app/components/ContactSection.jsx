@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 
 export default  function ContactSection() {
   return (
-    <section className="py-24 px-6 md:px-16 bg-(--background-color)">
+    <section id="contact-form" className="py-24 px-6 md:px-16 bg-(--background-color)">
 
       <div className="grid md:grid-cols-2 gap-16 items-start">
 

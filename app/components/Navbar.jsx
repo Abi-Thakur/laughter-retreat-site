@@ -20,7 +20,6 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Retreats", href: "/retreats" },
-    { name: "Facilitators", href: "/facilitators" },
     { name: "Blog", href: "/blogs" },
     { name: "Contact", href: "/contact" },
   ];
@@ -59,7 +58,9 @@ export default function Navbar() {
 
             {/* CTA */}
             <div className="hidden sm:block">
-              <Button variant="secondary">Contact us</Button>
+              <a href="#contact-form">
+                <Button variant="secondary">Contact us</Button>
+              </a>
             </div>
 
             {/* MOBILE MENU */}

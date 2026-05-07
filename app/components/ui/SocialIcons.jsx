@@ -6,9 +6,9 @@ import {
 } from "react-icons/fa";
 
 const icons = [
-  { icon: FaInstagram, link: "#" },
-  { icon: FaFacebookF, link: "#" },
-  { icon: FaYoutube, link: "#" },
+  { icon: FaInstagram, link: "https://www.instagram.com/laughterlovelive/" },
+  { icon: FaFacebookF, link: "https://www.facebook.com/profile.php?id=61572684695276" },
+  { icon: FaYoutube, link: "https://www.youtube.com/@LaughterLoveLive-u4t/shorts" },
   { icon: FaLinkedinIn, link: "#" },
 ];
 

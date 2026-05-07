@@ -14,10 +14,10 @@ export default function Footer() {
         {/* BRAND */}
         <div>
           <Image
-            src="/logo-white.png"
+            src="/footerlogo.png"
             alt="Logo"
-            width={80}
-            height={50}
+            width={200}
+            height={150}
           />
 
           <p className="mt-4 text-sm text-white/70 leading-relaxed max-w-sm">
