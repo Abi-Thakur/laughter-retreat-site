@@ -1,4 +1,5 @@
 import { Jost, Cormorant_Garamond } from 'next/font/google';
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
       className={`${jost.variable} ${cormorant.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+         <GoogleTagManager gtmId="GTM-WL7TSQVD" />
         <Navbar/>
         {children}
         <Footer/>
