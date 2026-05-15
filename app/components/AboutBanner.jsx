@@ -25,7 +25,7 @@ export default function AboutBanner() {
         <div className="max-w-2xl space-y-6 text-white">
 
           <div>
-            <Eyebrow variant="light">About Us</Eyebrow>
+            <Eyebrow variant="light">About our retreats</Eyebrow>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-serif leading-tight">
